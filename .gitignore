@@ -1,0 +1,13 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets and dependencies (should never be submitted)
+.env
+.env.*
+node_modules/
+venv/
+.venv/
+__pycache__/

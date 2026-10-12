@@ -1,81 +1,103 @@
-# Class Projects Submission Repository
+# CSC 407: Class Projects
 
-This repository is where every student submits their project code for review by our lecturer.
+Submission repository for **CSC 407**. Every student submits their assigned project here so the lecturer can review everyone's code in one place.
 
-**Course:** CSC3xx (replace with course code)
-**Lecturer:** (replace with lecturer's name)
-**Session:** 2026/2027
+> You do **not** need an invite. You submit by forking this repo and opening a pull request.
 
 ---
 
-## How to Submit Your Project
+## Quick Start
 
-You do **not** need to be invited. Just follow these steps.
+1. **Fork** this repo (button at the top right).
+2. **Clone** your fork:
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/class-project.git
+   cd class-project
+   ```
+3. **Create your folder** inside `students/`, named:
+   ```
+   firstname-matricno-projecttitle
+   ```
+   Example: `students/benjamin-12345-school-fees-system`
+4. **Add your project code** and a `README.md` inside that folder (see below).
+5. **Commit and push:**
+   ```bash
+   git add .
+   git commit -m "Add project: firstname-matricno-projecttitle"
+   git push origin main
+   ```
+6. **Open a Pull Request** from your fork to this repo. Use the title:
+   ```
+   Submission: Firstname Lastname - Matric No
+   ```
 
-### 1. Fork this repository
-Click the **Fork** button at the top right of this page. This creates your own copy under your GitHub account.
+Need more detail? See the step-by-step guide below.
 
-### 2. Clone your fork
-```bash
-git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
-cd REPO-NAME
-```
+---
 
-### 3. Create your project folder
-Inside the `students/` folder, create a folder named like this:
+## What Goes in Your Project README
 
-```
-firstname-matricno-projecttitle
-```
+Create `students/your-folder/README.md` containing:
 
-Example: `students/benjamin-12345-school-fees-system`
-
-Put **all your project files** inside this folder. Do not touch anyone else's folder.
-
-### 4. Add a README for your project
-Inside your folder, add a `README.md` containing:
-- Your full name and matric number
+- Full name and matric number
 - Project title
-- A short description (2-3 sentences)
-- Tech stack used
-- How to run the project
+- Short description (2-3 sentences)
+- Tech stack
+- How to install and run it
+- Screenshots (optional, but helpful)
 
-### 5. Commit and push
-```bash
-git add .
-git commit -m "Add project: firstname-matricno-projecttitle"
-git push origin main
+A ready-made template is in [`students/_TEMPLATE/README.md`](students/_TEMPLATE/README.md). Copy it into your folder and fill it in.
+
+---
+
+## Step-by-Step Guide
+
+### 1. Fork
+Click **Fork** at the top right of this page, then **Create fork**. You now have your own copy under your GitHub account.
+
+### 2. Clone and enter the repo
+Use the clone command in the Quick Start. You need [Git](https://git-scm.com/downloads) installed.
+
+### 3. Create your folder
+Folder names must be lowercase, with no spaces (use hyphens).
+
+```
+students/
+└── firstname-matricno-projecttitle/
+    ├── README.md
+    ├── src/
+    └── ...your code
 ```
 
-### 6. Open a Pull Request
-Go to your fork on GitHub, click **Contribute**, then **Open pull request**. Use this title format:
+### 4. Commit and push
+Run the commands from the Quick Start. If Git asks you to sign in, use your GitHub username and a [personal access token](https://github.com/settings/tokens) as the password, or sign in through GitHub Desktop.
 
-```
-Submission: Firstname Lastname - Matric No
-```
+### 5. Open the Pull Request
+Go to your fork on GitHub, click **Contribute → Open pull request**, fill in the template, and submit.
+
+### 6. Updating your submission
+Just keep committing and pushing to your fork. Your pull request updates automatically. You do not need to open a new one.
 
 ---
 
 ## Rules
 
-- One folder per student. Only edit your own folder.
-- Do not commit `node_modules`, `.env` files, passwords, or API keys. Add a `.gitignore`.
-- Make sure your project runs before you submit.
-- You can keep pushing updates to your fork. Your pull request updates automatically.
-- Do not delete or modify other students' work.
+- **Only edit your own folder.** Pull requests that touch anything outside a single folder under `students/` fail the automatic check.
+- **Never commit secrets.** No `.env` files, passwords, API keys, or database credentials.
+- **Never commit dependencies or build output.** No `node_modules`, `venv`, `build`, or `dist` folders. Add a `.gitignore` inside your folder.
+- **Your project must run** following the instructions in your README.
+- **Original work only.** You must be able to explain every part of your code.
+- **Submit before the deadline** announced in class.
 
-## Folder Structure
+---
 
-```
-.
-├── README.md
-└── students/
-    ├── firstname-matricno-projecttitle/
-    │   ├── README.md
-    │   └── ...your code
-    └── ...
-```
+## Troubleshooting
 
-## Need Help?
+| Problem | Fix |
+|---|---|
+| `Permission denied` when pushing | You cloned this repo instead of your fork. Re-clone using your own username in the URL. |
+| Automatic check failed on my PR | You changed files outside your folder, or touched more than one folder. Undo those changes and push again. |
+| My fork is out of date | On your fork's page, click **Sync fork → Update branch**, then `git pull`. |
+| Merge conflict | You edited something outside your folder. Sync your fork and move your work back into your own folder. |
 
-Ask in the class group chat before the submission deadline.
+Still stuck? Ask in the class group chat.
